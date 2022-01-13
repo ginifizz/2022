@@ -1,0 +1,172 @@
+@import "~@fontsource/poppins/200.css";
+@import "~@fontsource/poppins/300.css";
+@import "~@fontsource/poppins/400.css";
+@import "~@fontsource/poppins/700.css";
+@import "~@fontsource/poppins/900.css";
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    height: calc(100vh - calc(100vh - 100%));
+    width: 100%;
+    font-family:
+        Poppins,
+        -apple-system,
+        sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+$starFieldWidth: 2560;
+$starFieldHeight: 2560;
+
+$starOneScrollDuration: 1000s;
+$starTwoScrollDuration: 500s;
+$starThreeScrollDuration: 800s;
+$numStarOneStars: 500;
+$numStarTwoStars: 300;
+$numStarThreeStars: 100;
+$numShootingStars: 10;
+$width: 100%;
+
+@function create-stars($n) {
+
+    $stars: "#{random($starFieldWidth)}px #{random($starFieldHeight)}px #FFF";
+
+    @for $i from 2 through $n {
+        $stars: "#{$stars}, #{random($starFieldWidth)}px #{random($starFieldHeight)}px #FFF";
+    }
+
+    @return unquote($stars)
+
+};
+
+@mixin star-template($numStars, $starSize, $scrollSpeed) {
+    $allstars: create-stars($numStars);
+    z-index: 10;
+    width: $starSize;
+    height: $starSize;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: $allstars;
+    animation: animStar $scrollSpeed linear infinite;
+
+    &::after {
+        content: " ";
+        top: #{$starFieldHeight}px;
+        left: #{$starFieldWidth}px;
+        width: $starSize;
+        height: $starSize;
+        border-radius: 50%;
+        position: absolute;
+        backgroud: transparent;
+        box-shadow: $allstars;
+    }
+};
+
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+
+  to {
+    transform: translateY(-#{$starFieldHeight}px) translateX(-#{$starFieldWidth}px);
+  }
+}
+
+@keyframes animShootingStar {
+  from {
+    transform: translateY(0px) translateX(0px) rotate(-45deg);
+    opacity: 1;
+    height: 5px;
+  }
+
+  to {
+    transform: translateY(-#{$starFieldHeight}px) translateX(-#{$starFieldWidth}px) rotate(-45deg);
+    opacity: 1;
+    height: 800px;
+  }
+}
+
+@keyframes glowing {
+  from {
+    text-shadow: 0px 0px 0px #00aad4;
+  }
+
+  to {
+    text-shadow: 0px 0px 5px #00aad4,0px 0px 10px #00aad4,0px 0px 15px #00aad4,0px 0px 20px #00aad4;
+  }
+}
+    
+
+
+@mixin shooting-star-template($numStars, $starSize, $speed) {
+    z-index: 10;
+    width: $starSize;
+    height: $starSize + 80px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(to top, rgb(255 255 255 / 0%), rgb(255 255 255 / 100%));
+    animation: animShootingStar $speed linear infinite;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .with-sky {
+        position: relative;
+        box-shadow: inset 0 0 100px #000;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 150%;
+            height: 100%;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 80%);
+            background: yellow;
+            border-radius: 50%;
+            filter: blur(50px);
+            opacity: 0.2;
+        }
+    }
+
+    .stars1 {
+        @include star-template($numStarOneStars, 1px, $starOneScrollDuration)
+    
+    }
+
+    .stars2 {
+        @include star-template($numStarTwoStars, 3px, $starTwoScrollDuration)
+
+    }
+
+    .stars3 {
+        @include star-template($numStarThreeStars, 4px, $starThreeScrollDuration)
+
+    }
+
+    .shooting-stars {
+        @include shooting-star-template($numShootingStars, 5px, 10s)
+
+    }
+
+    .glow {
+        animation: glowing 1s alternate infinite ease-out;
+    }
+}

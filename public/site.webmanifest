@@ -1,0 +1,14 @@
+{
+  "theme_color": "#002a52",
+  "background_color": "#fff",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "name": "Bonne année 2022",
+  "short_name": "Bonne année 2022",
+  "description": "En retard pour envoyer vos voeux ? Avec notre générateur de cartes de voeux, envoyez un message personnalisé à vos proches !",
+  "icons": [
+    { "src": "/icon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "/icon-512.png", "type": "image/png", "sizes": "512x512" }
+  ]
+}

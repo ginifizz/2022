@@ -1,0 +1,274 @@
+[
+  {
+    "id": "p",
+    "label": "Mon/ma patron.ne",
+    "moods": [
+      {
+        "id": "0",
+        "label": "Je l’adore",
+        "sentences": [
+          "Pour 2022 je te souhaite...",
+          "une année formidable",
+          "(et j'espère que travailler avec toi restera toujours aussi génial !)"
+        ],
+        "keyword": "awesome"
+      },
+      {
+        "id": "1",
+        "label": "Je le/la respecte",
+        "sentences": [
+          "Pour 2022 je te souhaite...",
+          "une merveilleuse année !",
+          "(et j'espère que tu continueras à nous inspirer !)"
+        ],
+        "keyword": "inspire"
+      },
+      {
+        "id": "2",
+        "label": "Je l'aime secrètement",
+        "sentences": [
+          "Pour 2022 je te souhaite...",
+          "une année pleine d'amour !",
+          "(PS : je n'ai rien contre les promotions canapé !)"
+        ],
+        "keyword": "couch"
+      },
+      {
+        "id": "3",
+        "label": "Je le/la déteste (mais ça reste entre nous hein ?)",
+        "sentences": ["Pour 2022 je te souhaite...", "une aussi bonne année que 2021.", "Cordialement."],
+        "keyword": "sincerely"
+      },
+      {
+        "id": "4",
+        "label": "Je le/la déteste (et j'ai bien envie de lui faire savoir)",
+        "sentences": ["Pour 2022 je te souhaite...", "une année des plus médiocres", "(comme toi !)"],
+        "keyword": "poor"
+      }
+    ]
+  },
+  {
+    "id": "f",
+    "label": "Un membre de ma famille",
+    "moods": [
+      {
+        "id": "0",
+        "label": "Je l’adore",
+        "sentences": [
+          "Pour 2022 je te souhaite...",
+          "une excellente année",
+          "(C'est toi qui me motive à venir aux fêtes de famille !)"
+        ],
+        "keyword": "lovely"
+      },
+      {
+        "id": "1",
+        "label": "Je le/la respecte",
+        "sentences": [
+          "Pour 2022 je te souhaite...",
+          "une très bonne année",
+          "(N'attendons pas Noël pour nous revoir !)"
+        ],
+        "keyword": "wait"
+      },
+      {
+        "id": "2",
+        "label": "Je m'en fiche un peu mais on me force à lui envoyer mes voeux",
+        "sentences": [
+          "Pour 2022 je te souhaite...",
+          "une bonne année",
+          "(Ouf, plus qu'un an avant de refaire cette corvée des vœux.)"
+       ],
+        "keyword": "shore"
+      },
+      {
+        "id": "3",
+        "label": "Je le/la déteste (mais ça reste entre nous hein ?)",
+        "sentences": [
+          "Pour 2022 je te souhaite...",
+          "une année correcte.",
+          "(et passe le bonjour à ton animal de compagnie !)"
+        ],
+        "keyword": "hello"
+      },
+      {
+        "id": "4",
+        "label": "Je le/la déteste (et j'ai bien envie de lui faire savoir)",
+        "sentences": [
+          "Pour 2022 je te souhaite...",
+          "Une année bien pourrie.",
+          "(Peut-être que cette année tu arrêteras enfin de lancer des sujets polémiques à table ?)"
+        ],
+        "keyword": "polemical"
+      }
+    ]
+  },
+  {
+    "id": "e",
+    "label": "L'élu.e de mon coeur",
+    "moods": [
+      {
+        "id": "0",
+        "label": "Je l’aime",
+        "sentences": [
+          "Pour 2022 je te souhaite...",
+          "une année merveilleuse",
+          "(Pour moi elle le sera forcément à tes côtés !)"
+        ],
+        "keyword": "wonderful"
+      },
+      {
+        "id": "1",
+        "label": "Je veux l'épouser",
+        "sentences": [
+          "Pour 2022 je nous souhaite...",
+          "de beaux souvenirs à créer ensemble.",
+          "(Rien à voir, mais tu peux me rappeler la taille de ton annulaire ?)"
+        ],
+        "keyword": "ring"
+      },
+      {
+        "id": "2",
+        "label": "Il/Elle m'exaspère",
+        "sentences": [
+          "Pour 2022 je te souhaite...",
+          "Une année instructive",
+          "(d'ailleurs peut-être qu'en 2022 tu apprendras enfin à ramasser tes chaussettes ?)"
+        ],
+        "keyword": "socks"
+      },
+      {
+        "id": "3",
+        "label": "Je veux le/la quitter (mais ça reste entre nous hein ?)",
+        "sentences": [
+          "Pour 2022 je te souhaite...",
+          "Une année correcte.",
+          "(Et mutuellement une bonne continuation dans nos vies respectives)"
+        ],
+        "keyword": "cordially"
+      },
+      {
+        "id": "4",
+        "label": "Je veux le/la quitter (et je cherchais justement un moyen de le lui dire !)",
+        "sentences": [
+          "Pour 2022 je souhaite...",
+          "de respirer un bon coup et de t'assoir ",
+          "(Parce qu'il faut qu'on parle...)"
+       ],
+        "keyword": "break"
+      }
+    ]
+  },
+  {
+    "id": "a",
+    "label": "Un.e ami.e",
+    "moods": [
+      {
+        "id": "0",
+        "label": "Je l'adore",
+        "sentences": [
+          "Pour 2022 je te souhaite...",
+          "une année formidable",
+          "(Pour moi, tu fais partie de la famille !)"
+        ],
+        "keyword": "family"
+      },
+      {
+        "id": "1",
+        "label": "Je l'apprécie",
+        "sentences": [
+          "Pour 2022 je te souhaite...",
+          "Une excellente année !",
+          "(Et encore de bons moments en ta compagnie !)"
+        ],
+        "keyword": "fantastic"
+      },
+      {
+        "id": "2",
+        "label": "Je l'aime secrètement",
+        "sentences": [
+          "Pour 2022 je te souhaite...",
+          "le meilleur à venir !",
+          "Je suis disponible quand tu veux pour boire un verre (ou plus...)"
+        ],
+        "keyword": "drink"
+      },
+      {
+        "id": "3",
+        "label": "Je le/la déteste (mais ça reste entre nous hein ?)",
+        "sentences": [
+          "Pour 2022 je te souhaite...",
+          "deux bons solstices.",
+          "(Par contre ça va être compliqué de se voir prochainement, je ne suis disponible qu'à partir de juillet)"
+       ],
+        "keyword": "agenda"
+      },
+      {
+        "id": "4",
+        "label": "Je le/la déteste (et j'ai bien envie de lui faire savoir)",
+        "sentences": [
+          "Pour 2022 je te souhaite...",
+          "une année au goût de carton",
+          "(Parce que tu auras choppé le COVID !)"
+        ],
+        "keyword": "covid"
+      }
+    ]
+  },
+  {
+    "id": "c",
+    "label": "Un.e collègue",
+    "moods": [
+      {
+        "id": "0",
+        "label": "Je l'adore",
+        "sentences": [
+          "Pour 2022 je te souhaite...",
+          "une excellente année",
+          "(Et des afterworks à n'en plus en finir !)"
+        ],
+        "keyword": "afterwork"
+      },
+      {
+        "id": "1",
+        "label": "Je l'apprécie",
+        "sentences": [
+          "Pour 2022 je te souhaite...",
+          "une très bonne année",
+          "(Et un max de pauses café à partager !)"
+        ],
+        "keyword": "coffee"
+      },
+      {
+        "id": "2",
+        "label": "Je l'aime secrètement",
+        "sentences": [
+          "Pour 2022 je te souhaite...",
+          "une année pleine d'amour !",
+          "(D'ailleurs, tu es bientôt dispo pour un verre après le boulot ?)"
+        ],
+        "keyword": "further"
+      },
+      {
+        "id": "3",
+        "label": "Je le/la déteste (mais ça reste entre nous hein ?)",
+        "sentences": [
+          "Pour 2022 je te souhaite...",
+          "Une année digne de 2021.",
+          "Bien cordialement."
+        ],
+        "keyword": "tasteless"
+      },
+      {
+        "id": "4",
+        "label": "Je le/la déteste (et j'ai bien envie de lui faire savoir)",
+        "sentences": [
+          "Pour 2022 je te souhaite...",
+          "une année minable.",
+          "(Et va bien te faire cuire le c** !)"
+        ],
+        "keyword": "fu"
+      }
+    ]
+  }
+]
