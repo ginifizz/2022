@@ -85,10 +85,10 @@ const GeneratePage: NextPage = () => {
 
   const copyToClipboard = useCallback(() => {
     navigator.clipboard.writeText(
-      `http://happy-new-year-2022.vercel.app/${mood?.keyword.toUpperCase()}/${name?.replace(' ', '--').toUpperCase()}`
+      `${process.env.NEXT_PUBLIC_BASE_URL}${mood?.keyword.toUpperCase()}/${name?.replace(' ', '--').toUpperCase()}`
     );
   }, [name, mood]);
-
+  console.log(process.env.NEXT_PUBLIC_BASE_URL);
   return (
     <Background>
       <div className="text-white text-xs md:text-sm text-center absolute w-full top-0 font-light z-10 p-4">
@@ -127,10 +127,9 @@ const GeneratePage: NextPage = () => {
       <FadingForm current={currentQuestion === null}>
         <div className="text-sm absolute w-full px-4 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-center | md:text-md">
           <div className="mb-4">Voici l&apos;URL de votre carte : (cliquer pour copier)</div>
-          <div
-            className="text-lg text-uppercase | md:text-3xl"
-            onClick={copyToClipboard}
-          >{`2022.les-tilleuls.coop/${mood?.keyword.toUpperCase()}/${name?.replace(' ', '--').toUpperCase()}`}</div>
+          <div className="text-lg text-uppercase | md:text-3xl" onClick={copyToClipboard}>{`${
+            process.env.NEXT_PUBLIC_BASE_URL
+          }${mood?.keyword.toUpperCase()}/${name?.replace(' ', '--').toUpperCase()}`}</div>
         </div>
       </FadingForm>
     </Background>
