@@ -85,7 +85,7 @@ const CardPage = ({ mood, name }: CardPageProps): JSX.Element => {
       <div
         className={`${
           animComplete
-            ? 'transition-all portrait:scale-95 portrait:-translate-y-[15vh] | landscape:scale-[66%] landscaoe:-translate-y-0 landscape:-translate-x-[15vw] | xl:scale-75 '
+            ? 'transition-all portrait:scale-95 portrait:-translate-y-[15vh] | landscape:scale-[66%] landscaoe:-translate-y-0 landscape:-translate-x-[15vw] | landscape:xl:scale-90'
             : ''
         } duration-500 relative text-white flex flex-col items-start justify-center h-screen w-full px-8 | md:px-12`}
       >
@@ -106,7 +106,7 @@ const CardPage = ({ mood, name }: CardPageProps): JSX.Element => {
           {sentences.map((sentence, index) => {
             if (index === 0) {
               return (
-                <div className="text-[4vmin] md:text-[3vmin] font-extralight break-words" ref={refWish}>
+                <div className="text-[4vmin] md:text-[3vmin] font-extralight break-words mb-2" ref={refWish}>
                   {sentence}
                 </div>
               );
@@ -114,7 +114,7 @@ const CardPage = ({ mood, name }: CardPageProps): JSX.Element => {
               return (
                 <div className="w-full">
                   <div
-                    className="pb-1 uppercase text-[12vmin] md:text-[15vmin] break-words leading-[1] font-extrabold"
+                    className="mb-2 uppercase text-[12vmin] md:text-[15vmin] break-words leading-[1] font-extrabold"
                     ref={refYear}
                   >
                     {sentence}

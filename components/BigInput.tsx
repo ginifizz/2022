@@ -1,4 +1,4 @@
-import { useCallback, useState, ChangeEvent } from 'react';
+import { useCallback, useState, ChangeEvent, KeyboardEvent } from 'react';
 import Button from 'components/Button';
 
 interface BigInputProps {
@@ -22,6 +22,15 @@ const BigInput = ({ question, placeholder, value, onChange }: BigInputProps): JS
     onChange(currentValue);
   }, [onChange, currentValue]);
 
+  const onKeyUp = useCallback(
+    (event: KeyboardEvent<HTMLInputElement>) => {
+      if (event.key === 'Enter' || event.keyCode === 13) {
+        submit();
+      }
+    },
+    [submit]
+  );
+
   return (
     <div className="h-screen w-full flex flex-col items-center justify-center text-white font-sans text-center p-8">
       <p className="text-xl mb-4 uppercase font-light | md:text-2xl">{question}</p>
@@ -33,6 +42,7 @@ const BigInput = ({ question, placeholder, value, onChange }: BigInputProps): JS
         type="text"
         value={currentValue}
         onChange={onInputChange}
+        onKeyUp={onKeyUp}
       />
       {
         <Button onClick={submit} className={`mt-8 ${currentValue ? '' : 'opacity-0 pointer-events-none'}`}>
